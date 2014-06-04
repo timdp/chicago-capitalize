@@ -1,6 +1,6 @@
 {
   "name": "chicago-capitalize",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Capitalizes a title according to the Chicago Manual of Style.",
   "homepage": "https://github.com/timdp/node-chicago-capitalize",
   "main": "index.js",
@@ -18,9 +18,9 @@
     "url": "https://github.com/timdp/node-chicago-capitalize/issues"
   },
   "dependencies": {
-    "minimist": "0.1.0",
-    "title-case-minors": "0.0.2",
-    "xregexp": "^2.0.0"
+    "minimist": "~0.1.0",
+    "title-case-minors": "~0.0.2",
+    "xregexp": "~2.0.0"
   },
   "devDependencies": {
     "mocha": "~1.19.0"
