@@ -51,4 +51,12 @@ describe('chicago-capitalize', function() {
   def('does not mangle existing capitalization',
     'This Sentence Is Already Fully Capitalized and Pretty. Hurray!',
     'This Sentence Is Already Fully Capitalized and Pretty. Hurray!');
+
+  def('handles international characters properly',
+    'crème brûlée',
+    'Crème Brûlée');
+
+  def('does not capitalize after an apostrophe',
+    "it's the 'bee's knees', man",
+    "It's the 'Bee's Knees', Man");
 });
