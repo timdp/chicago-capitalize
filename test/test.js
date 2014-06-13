@@ -4,9 +4,9 @@ var assert = require('assert');
 var describe = global.describe;
 var it = global.it;
 
-var def = function(desc, input, expected) {
+var def = function(desc, input, expected, options) {
   it(desc, function(done) {
-    assert.strictEqual(capitalize(input), expected);
+    assert.strictEqual(capitalize(input, options), expected);
     done();
   });
 };
@@ -59,4 +59,30 @@ describe('chicago-capitalize', function() {
   def('does not capitalize after an apostrophe',
     "it's the 'bee's knees', man",
     "It's the 'Bee's Knees', Man");
+
+  def('does not require a whitelist',
+    "hello",
+    "Hello",
+    {});
+
+  def('respects the whitelist within the string',
+    "I bought an iPad on eBay yesterday. eBay rocks.",
+    "I Bought an iPad on eBay Yesterday. eBay Rocks.",
+    {
+      whitelist: ['iPad', 'eBay']
+    });
+
+  def('respects the whitelist for the first word',
+    "eBay rocks.",
+    "eBay Rocks.",
+    {
+      whitelist: ['iPad', 'eBay']
+    });
+
+  def('respects the whitelist for the last word',
+    "I love eBay.",
+    "I Love eBay.",
+    {
+      whitelist: ['iPad', 'eBay']
+    });
 });

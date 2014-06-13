@@ -26,6 +26,18 @@ var output = capitalize(input);
 console.log(output);
 ```
 
+You can also pass an options object. For now, the only option is `whitelist`:
+an array of words not to capitalize. Note that it is case-sensitive.
+
+```js
+var input = 'Sent from my iPhone.';
+var options = { whitelist: ['iPhone'] };
+var output = capitalize(input, options);
+
+// Prints 'Sent from My iPhone.'
+console.log(output);
+```
+
 Author
 ------
 

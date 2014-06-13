@@ -10,7 +10,7 @@ require('title-case-minors').forEach(function(m) {
 var letterRE = XRegExp('^\\p{L}$');
 var wordRE = XRegExp('\\b((\\p{L})(\\p{L}*))', 'g');
 
-var replacer = function(str) {
+var replacer = function(str, whitelist) {
   var fn = function(match, word, first, rest, offset) {
     var shouldCapitalize;
     if (offset > 1 &&
@@ -20,7 +20,7 @@ var replacer = function(str) {
       // with a genitive. Do not capitalize.
       shouldCapitalize = false;
     } else if (fn.firstOffset < 0) {
-      // The first match is always capitalized.
+      // The first match is always capitalized, except if it is whitelisted.
       shouldCapitalize = true;
       // Hold on to the match's position.
       fn.firstOffset = offset;
@@ -40,8 +40,11 @@ var replacer = function(str) {
     // Even if this is the last word, we are already about to capitalize it, so
     // we don't need to hold on to its position.
     fn.lastOffset = -1;
-    // Perform capitalization.
-    return first.toUpperCase() + rest;
+
+    // Perform capitalization unless the word is whitelisted.
+    return whitelist.hasOwnProperty(word) ?
+      word :
+      first.toUpperCase() + rest;
   };
   fn.string = str;
   fn.firstOffset = -1;
@@ -57,12 +60,19 @@ var isLetter = function(ch) {
   return letterRE.test(ch);
 };
 
-module.exports = function(str) {
+module.exports = function(str, options) {
   if (typeof str !== 'string' || str.length === 0) {
     return '';
   }
 
-  var repl = replacer(str);
+  var whitelist = {};
+  if (typeof options === 'object' && options !== null && options.whitelist) {
+    options.whitelist.forEach(function(word) {
+      whitelist[word] = null;
+    });
+  }
+
+  var repl = replacer(str, whitelist);
 
   // Capitalize all words that aren't minor words.
   var result = str.replace(wordRE, repl);
