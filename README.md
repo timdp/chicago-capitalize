@@ -70,5 +70,5 @@ SOFTWARE.
 [npm-url]: https://npmjs.org/package/chicago-capitalize
 [npm-image]: https://badge.fury.io/js/chicago-capitalize.png
 
-[travis-url]: http://travis-ci.org/timdp/node-chicago-capitalize
+[travis-url]: https://travis-ci.org/timdp/node-chicago-capitalize
 [travis-image]: https://secure.travis-ci.org/timdp/node-chicago-capitalize.png?branch=master
