@@ -3,6 +3,9 @@
   "version": "0.0.9",
   "description": "Capitalizes a title according to the Chicago Manual of Style.",
   "homepage": "https://github.com/timdp/node-chicago-capitalize",
+  "engines": {
+    "node": ">=0.10.0"
+  },
   "main": "index.js",
   "bin": {
     "chicago-capitalize": "cli.js"
@@ -29,10 +32,5 @@
     "name": "Tim De Pauw",
     "url": "http://tmdpw.eu/"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://raw.githubusercontent.com/timdp/node-chicago-capitalize/master/LICENSE"
-    }
-  ]
+  "license": "MIT"
 }
