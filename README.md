@@ -1,12 +1,10 @@
-chicago-capitalize
-==================
+# chicago-capitalize
 
-[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
+[![npm](https://img.shields.io/npm/v/chicago-capitalize.svg)](https://www.npmjs.com/package/chicago-capitalize) [![Build Status](https://img.shields.io/travis/timdp/node-chicago-capitalize.svg)](https://travis-ci.org/timdp/node-chicago-capitalize)
 
 Capitalizes a title according to the Chicago Manual of Style.
 
-Usage
------
+## Usage
 
 First, install `chicago-capitalize` as a dependency:
 
@@ -38,15 +36,13 @@ var output = capitalize(input, options);
 console.log(output);
 ```
 
-Author
-------
+## Author
 
-[Tim De Pauw](http://tmdpw.eu/)
+[Tim De Pauw](https://tmdpw.eu/)
 
-License
--------
+## License
 
-Copyright &copy; 2014 Tim De Pauw
+Copyright &copy; 2015 Tim De Pauw
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -65,10 +61,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-
-[npm-url]: https://npmjs.org/package/chicago-capitalize
-[npm-image]: https://badge.fury.io/js/chicago-capitalize.png
-
-[travis-url]: https://travis-ci.org/timdp/node-chicago-capitalize
-[travis-image]: https://secure.travis-ci.org/timdp/node-chicago-capitalize.png?branch=master
