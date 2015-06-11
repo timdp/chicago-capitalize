@@ -1,6 +1,6 @@
 {
   "name": "chicago-capitalize",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Capitalizes a title according to the Chicago Manual of Style.",
   "homepage": "https://github.com/timdp/node-chicago-capitalize",
   "engines": {
