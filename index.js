@@ -7,17 +7,18 @@ require('title-case-minors').forEach(function (m) {
   minors[m.toLowerCase()] = null
 })
 
-var letterRE = XRegExp('^\\p{L}$')
-var wordRE = XRegExp('\\b((\\p{L})(\\p{L}*))', 'g')
+var alnum = '[\\p{L}\\p{N}]'
+var alnumRE = XRegExp('^' + alnum + '$')
+var wordRE = XRegExp('\\b((' + alnum + ')(' + alnum + '*))', 'g')
 
 var replacer = function (str, whitelist) {
   var fn = function (match, word, first, rest, offset) {
     var shouldCapitalize
     if (offset > 1 &&
-      isApostrophe(fn.string[offset - 1]) &&
-      isLetter(fn.string[offset - 2])) {
-      // If the match is preceded by a letter and an apostrophe, we are dealing
-      // with a genitive. Do not capitalize.
+        isApostrophe(fn.string[offset - 1]) &&
+        isAlphanumeric(fn.string[offset - 2])) {
+      // If the match is preceded by an alphanumeric character and an
+      // apostrophe, we are dealing with a genitive. Do not capitalize.
       shouldCapitalize = false
     } else if (fn.firstOffset < 0) {
       // The first match is always capitalized, except if it is whitelisted.
@@ -42,8 +43,7 @@ var replacer = function (str, whitelist) {
     fn.lastOffset = -1
 
     // Perform capitalization unless the word is whitelisted.
-    return whitelist.hasOwnProperty(word) ?
-      word :
+    return whitelist.hasOwnProperty(word) ? word :
       first.toUpperCase() + rest
   }
   fn.string = str
@@ -56,8 +56,8 @@ var isApostrophe = function (ch) {
   return ch === "'" || ch === '’'
 }
 
-var isLetter = function (ch) {
-  return letterRE.test(ch)
+var isAlphanumeric = function (ch) {
+  return alnumRE.test(ch)
 }
 
 module.exports = function (str, options) {

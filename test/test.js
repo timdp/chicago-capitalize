@@ -45,6 +45,10 @@ describe('chicago-capitalize', function () {
     'log in',
     'Log In')
 
+  def('only force-capitalizes the first and the last word',
+    'progress at 50%',
+    'Progress at 50%')
+
   def('does not affect capitalized words',
     'Read our FAQ now',
     'Read Our FAQ Now')
