@@ -2,7 +2,7 @@
   "name": "chicago-capitalize",
   "version": "0.0.12",
   "description": "Capitalizes a title according to the Chicago Manual of Style.",
-  "homepage": "https://github.com/timdp/node-chicago-capitalize",
+  "homepage": "https://github.com/timdp/chicago-capitalize",
   "engines": {
     "node": ">=0.10.0"
   },
@@ -15,10 +15,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/timdp/node-chicago-capitalize"
+    "url": "git://github.com/timdp/chicago-capitalize"
   },
   "bugs": {
-    "url": "https://github.com/timdp/node-chicago-capitalize/issues"
+    "url": "https://github.com/timdp/chicago-capitalize/issues"
   },
   "dependencies": {
     "minimist": "^1.1.1",
