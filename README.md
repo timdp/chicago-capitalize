@@ -1,6 +1,6 @@
 # chicago-capitalize
 
-[![npm](https://img.shields.io/npm/v/chicago-capitalize.svg)](https://www.npmjs.com/package/chicago-capitalize) [![Build Status](https://img.shields.io/travis/timdp/chicago-capitalize.svg)](https://travis-ci.org/timdp/chicago-capitalize) [![JavaScript Standard Style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
+[![npm](https://img.shields.io/npm/v/chicago-capitalize.svg)](https://www.npmjs.com/package/chicago-capitalize) [![Dependencies](https://img.shields.io/david/timdp/chicago-capitalize.svg)](https://david-dm.org/timdp/chicago-capitalize) [![Build Status](https://img.shields.io/travis/timdp/chicago-capitalize.svg)](https://travis-ci.org/timdp/chicago-capitalize) [![JavaScript Standard Style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
 
 Capitalizes a title according to the Chicago Manual of Style.
 
