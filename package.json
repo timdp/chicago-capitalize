@@ -19,11 +19,11 @@
   },
   "dependencies": {
     "minimist": "^1.1.1",
-    "title-case-minors": "~0.0.2",
-    "xregexp": "~2.0.0"
+    "title-case-minors": "~1.0.0",
+    "xregexp": "~3.1.1"
   },
   "devDependencies": {
-    "mocha": "^2.2.5"
+    "mocha": "^3.0.2"
   },
   "author": {
     "name": "Tim De Pauw",
