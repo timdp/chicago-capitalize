@@ -4,7 +4,7 @@
   "description": "Capitalizes a title according to the Chicago Manual of Style.",
   "homepage": "https://github.com/timdp/chicago-capitalize",
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">= 4"
   },
   "main": "index.js",
   "bin": {
